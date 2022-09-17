@@ -161,6 +161,7 @@ c	net/minecraft/a/a/f	net/minecraft/game/world/World
 	f	Lnet/minecraft/a/c/b;	a	playerEntity
 	f	J	l	fogColor
 	m	(Lnet/minecraft/a/c/b;)V	a	spawnEntityInWorld
+	m	(III)Z	b	blockExists
 	m	(Lnet/minecraft/a/d/b;)Ljava/util/List;	a	getCollidingBoundingBoxes
 	m	(II)Z	b	chunkExists
 	m	(III)I	d	getBlockMetadata
@@ -169,11 +170,13 @@ c	net/minecraft/a/a/f	net/minecraft/game/world/World
 	f	Ljava/util/List;	h	lightingToUpdate
 	m	(Lnet/minecraft/a/a/b;)V	a	addWorldAccess
 	m	(Lnet/minecraft/a/c/b;DDDF)V	a	createExplosion
+	m	(Lnet/minecraft/a/a/d;IIII)V	a	neighborLightPropagationChanged
 	f	[F	o	lightBrightnessTable
 	f	Ljava/util/List;	p	worldAccesses
 	m	(Ljava/lang/String;DDDDDD)V	a	spawnParticle
 	f	J	k	skyColor
 	f	F	g	spawnZ
+	m	(Lnet/minecraft/a/a/d;IIIIII)V	a	scheduleLightingUpdate
 	m	(IIIIII)V	a	swap
 	m	(III)Z	i	generateTrees
 	m	(IIII)Z	c	setBlockWithNotify
@@ -221,8 +224,16 @@ c	net/minecraft/a/a/c/a/a	net/minecraft/game/world/terrain/noise/NoiseGeneratorP
 	m	(DD)D	a	generateNoise
 	f	D	b	xCoord
 c	net/minecraft/a/a/e	net/minecraft/game/world/MetadataChunkBlock
+	f	I	d	z
+	f	I	e	maxX
+	f	I	b	x
+	f	I	c	y
 	f	Lnet/minecraft/a/a/d;	a	skyBlock
+	f	I	f	maxY
+	f	I	g	maxZ
 c	net/minecraft/a/a/d	net/minecraft/game/world/EnumSkyBlock
+	f	Lnet/minecraft/a/a/d;	b	Block
+	f	Lnet/minecraft/a/a/d;	a	Sky
 c	net/minecraft/a/c/b/b	net/minecraft/game/entity/animal/EntitySheep
 	m	()Ljava/lang/String;	g	getHurtSound
 	m	()Ljava/lang/String;	h	getDeathSound
